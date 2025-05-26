@@ -1,0 +1,29 @@
+body{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+header{
+    background-color: rgb(96, 117, 185);
+    padding: 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    justify-content: end;
+    align-items: center;
+    display: flex;
+    text-align: right;
+}
+nav img{
+    justify-content: center;
+    text-align: left;
+}
+nav a{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 15%;
+}
