@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picheleiro</title>
+
+   <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+    <header>
+        <img src="/imagens/logo.jpg" alt="Logo">
+        <nav>
+            <a href="/index.html" target="_blank">INICIO</a>
+            <a href="/pages/profissoes.html" target="_blank">PROFISSÕES</a>
+            <a href="/pages/contacto.html" target="_blank">CONTACTO</a>
+        </nav>
+    </header>
+    <main>
+        <div id="imagem">
+            <img src="/imagens/picheleiro 1.JPG" alt="picheleiro" width="500" height="300">
+
+        </div>
+        <div id="oque"></div>
+            <h1>Picheleiro</h1>
+                <p >O que faz?</p>
+                <p >Um Picheleiro(a) é a responsável por fazer a instalação e manutenção de revestimentos, como pisos e azulejos. Esse profissional pode trabalhar em obras novas ou em reformas, garantindo que os acabamentos sejam feitos com qualidade e precisão.</p>
+                <p></p>
+                
+        </div>
+
+        <br>
+
+        <div id="formacao">
+            <h1>Formação</h1>
+                <p>Uma pessoa que trabalha como Picheleiro(a) precisa entender não só de revestimentos, como também saber manusear ferramentas, entender como fazer a instalação correta e garantir a durabilidade dos materiais. A formação não é obrigatória para trabalhar na área, mas ter um curso de Revestimento pode ajudar bastante a entrar nesse mercado de trabalho e adquirir experiência. Geralmente o curso de Revestimento tem curta duração e nele você irá desenvolver as habilidades básicas necessárias para a instalação e manutenção de revestimentos. Outros cursos que também podem ser interessantes para que você continue sempre se especializando são: Revestimento de Paredes, Revestimento de Pisos e Revestimento de Azulejos.</p>
+        </div>
+
+        <br>
+
+        <div id = "adicionais">
+            <h1>Informações Adcionais</h1>
+                <h2>Equipamentos</h2>
+                    <p>Ferramentas de picheleiro (colheres de pedreiro, desempenadeiras, cortadores de azulejos).</p>
+                    <p> Equipamentos de proteção (luvas, botas, óculos).</p>
+                <h2>Requisitos legais</h2>
+                    <p>Seguir normas de segurança do trabalho.</p>
+                    <p>Estar atualizado sobre legislação ambiental.</p>
+
+        </div>
+
+        <div id="botao">
+
+            <button id="botao">Clique Aqui!</button>
+                <p id="curi1">1. </p>
+                <p id="curi2">2. </p>
+                <p id="curi3">3. </p>
+          
+        </div>
+          
+        <br>
+        <!--link não funciona, revisar-->
+        <button href="/pages/profissoes.html" target="_blank">Acessar Profissões</button>
+    </main>
+
+    <footer>
+        <span>&copy; &#174;</span>
+    </footer>
+    <script>
+        let botao = document.getElementById("botao")
+        let curi1 = document.getElementById("curi1")
+        let curi2 = document.getElementById("curi2")
+        let curi3 = document.getElementById("curi3")
+
+        curi1.style.display = "none";
+        curi2.style.display = "none";
+        curi3.style.display = "none";
+
+        function mostrarCuriosidade(){
+            const mostrar = curi1.style.display === "none";
+
+            curi1.style.display = mostrar ? "block" : "none";
+            curi2.style.display = mostrar ? "block" : "none";
+            curi3.style.display = mostrar ? "block" : "none";
+
+            botao.textContent = mostrar ? "Ocultar" : "Mostrar";
+        }
+        botao.addEventListener("click", mostrarCuriosidade);
+
+    </script>
+</body>
+</html>
