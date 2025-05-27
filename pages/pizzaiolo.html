@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEMMEJ</title>
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img src="Colocar path da imagem aqui" alt="Logo">
+        <button href="/pages/profissoes.html" target="_blank">Acessar Profissões</button>
+        <nav>
+            <a href="http://127.0.0.1:5500/Projeto/projeto001/index.html">INICIO</a>
+            <a href="http://127.0.0.1:5500/Projeto/projeto001/profissoes.html">PROFISSÕES</a>
+            <a href="http://127.0.0.1:5500/Projeto/projeto001/contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+    <main>
+        <img src="/Projeto001/imagens/Pizzaiolo.JPG" alt="Pizzaiolo">
+
+        <div id = "oque">
+
+            <h1>Pizzaiolo</h1>
+                <p>Um pizzaiolo é um profissional especializado na produção de pizzas. A sua função principal é preparar a massa, os recheios, os temperos e os aperitivos que acompanham a pizza, garantindo a qualidade, o sabor e a apresentação final, de forma a agradar os clientes</p>
+        </div>
+
+        <br>
+        <div>
+            <p>O Pizzaiolo é responsável por criar e preparar pizzas de forma artesanal, combinando ingredientes para criar sabores e texturas únicas</p>
+
+        </div>
+        
+        <br>
+
+        <div>
+        
+            <button id="botao">Clique Aqui!</button>
+                <p id="curi1">1. Os melhores pizzaiolos, muitas vezes, são herdeiros de uma tradição familiar que se estende por gerações. </p>
+                <p id="curi2">2. A figura do pizzaiolo tem suas raízes em Nápoles, Itália, onde a pizza moderna teve origem no século XVIII. </p>
+                <p id="curi3">3. Existe uma pizza famosa chamada Luigi XII, criada pelo pizzaiolo Renato Viola, que é considerada a mais cara do mundo, custando cerca de 8 mil euros. </p>
+        
+        </div>
+          
+        <br>
+    </main>
+
+    <footer>
+        <span>&copy; &#174;</span>
+    </footer>
+
+    <script>
+        let botao = document.getElementById("botao")
+        let curi1 = document.getElementById("curi1")
+        let curi2 = document.getElementById("curi2")
+        let curi3 = document.getElementById("curi3")
+
+        curi1.style.display = "none";
+        curi2.style.display = "none";
+        curi3.style.display = "none";
+
+        function mostrarCuriosidade(){
+            const mostrar = curi1.style.display === "none";
+
+            curi1.style.display = mostrar ? "block" : "none";
+            curi2.style.display = mostrar ? "block" : "none";
+            curi3.style.display = mostrar ? "block" : "none";
+
+            botao.textContent = mostrar ? "Ocultar" : "Mostrar";
+        }
+        botao.addEventListener("click", mostrarCuriosidade);
+
+    </script>
+</body>
+</html>

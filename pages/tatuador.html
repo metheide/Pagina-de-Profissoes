@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tatuador</title>
 
-     <link rel="stylesheet" href="./style.css">
+     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
@@ -17,6 +17,9 @@
         </nav>
     </header>
     <main>
+                <!--link não funciona, revisar-->
+        <button href="/pages/profissoes.html" target="_blank">Acessar Profissões</button>
+        
         <div id="imagem">
             <img src="/imagens/tatuador.jpg" alt="tatuador">
 
@@ -61,8 +64,7 @@
         </div>
           
         <br>
-        <!--link não funciona, revisar-->
-        <button href="/pages/profissoes.html" target="_blank">Acessar Profissões</button>
+
     </main>
 
     <footer>
@@ -93,8 +95,10 @@
             botao.textContent = mostrar ? "Ocultar" : "Mostrar";
         }
 
+        
         //dar utilizadae ao botão - botão tatuador
         botao.addEventListener("click", mostrarCuriosidade);
+        
 
     </script>
     
