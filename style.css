@@ -12,27 +12,27 @@ header{
     justify-content: space-between;
 }
 
+header img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
 nav{
     justify-content: end;
     align-items: center;
     display: flex;
     text-align: right;
 }
+
 nav img{
     justify-content: center;
     text-align: left;
+
 }
 nav a{
     background-color: rgb(255, 255, 255);
     padding: 8px;
     border-radius: 15%;
     margin: 5px;
-}
-
-footer {
-    background-color: #aec3c1;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
 }

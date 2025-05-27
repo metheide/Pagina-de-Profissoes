@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <style>
+    .hidden { 
+    display: none !important; 
+}
+    .visible { 
+    display: block !important; 
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEMMEJ - Contacto</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img src="/imagens/logo.jpg" alt="Logo">
+        <div>
+            <h2>JEMMEJ</h2>
+        </div>
+        <nav>
+            <a href="../index.html">INICIO</a>
+            <a href="./profissoes.html">PROFISSÕES</a>
+            <a href="./contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Formulário de Contacto</h1>
+        
+        <div id="formularioContainer">
+            <form id="formularioContacto">
+                <div class="campo-formulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome">
+                </div>
+                
+                <div class="campo-formulario">
+                    <label for="profissao">Profissão:</label>
+                    <input type="text" id="profissao" name="profissao" required placeholder="Digite a sua profissão">
+                </div>
+                
+                <button type="submit" id="botaoSubmeter">Submeter</button>
+            </form>
+        </div>
+
+        <!-- Seção da profissão secreta -->
+        <div id="profissaoSecreta" style="display: none;">
+            <h2 id="tituloProfissaoSecreta"> Profissão Secreta Revelada!</h2>
+            <h3 id="nomeProfissaoSecreta"> Arqueólogo Digital</h3>
+            <p id="curiosidadeProfissao">
+                Os Arqueólogos Digitais são profissionais fascinantes que recuperam e preservam dados perdidos 
+                ou corrompidos em sistemas antigos. Eles "escavam" através de códigos obsoletos 
+                e formatos de arquivo esquecidos para salvar informações históricas digitais!
+                <br><br>
+                É uma profissão do futuro que combina tecnologia, história e investigação!
+            </p>
+            <button type="button" id="botaoVerProfissao">🚀 Ver Página da Profissão Secreta</button>
+            <button type="button" id="botaoVoltarFormulario"> Voltar ao Formulário</button>
+        </div>
+
+        <button><a href="/pages/profissoes.html">Acessar Profissões</a></button>
+        
+    </main>
+
+    <footer>
+        <span>&copy; &#174; JEMMEJ - Evelyn Matos - Jesse Augusto - Matheus de Souza</span>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formulario = document.getElementById("formularioContacto");
+            const formularioContainer = document.getElementById("formularioContainer");
+            const profissaoSecreta = document.getElementById("profissaoSecreta");
+            
+            formulario.addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                const nome = document.getElementById("nome").value.trim();
+                const profissao = document.getElementById("profissao").value.trim();
+                
+                
+                const camposValidos = nome && profissao;
+                
+                formularioContainer.classList.toggle("hidden", camposValidos);
+                profissaoSecreta.classList.toggle("visible", camposValidos);
+                
+                camposValidos && (document.getElementById("tituloProfissaoSecreta").textContent = `Obrigado ${nome}! Aqui está uma profissão secreta:`);
+                camposValidos || alert("⚠️ Por favor, preencha todos os campos!");
+            });
+            
+            document.getElementById("botaoVerProfissao")?.addEventListener("click", () => {
+                console.log("Redirecionando para profissão secreta...");
+               
+                window.location.href = "./profissao-secreta.html";
+            });
+            
+            document.getElementById("botaoVoltarFormulario")?.addEventListener("click", () => {
+                formularioContainer.classList.remove("hidden");
+                profissaoSecreta.classList.remove("visible");
+                formulario.reset();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
