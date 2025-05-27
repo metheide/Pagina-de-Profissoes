@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinário</title>
+
+     <link rel="stylesheet" href="./pages/style.css">
+
 </head>
 <body>
     <header>
-        <img src="Colocar path da imagem aqui" alt="Logo">
+        <img src="/imagens/logo.jpg" alt="Logo">
         <nav>
-            <a href="http://127.0.0.1:5500/Projeto/projeto001/index.html">INICIO</a>
-            <a href="http://127.0.0.1:5500/Projeto/projeto001/profissoes.html">PROFISSÕES</a>
-            <a href="http://127.0.0.1:5500/Projeto/projeto001/contacto.html">CONTACTO</a>
+            <a href="/index.html" target="_blank">INICIO</a>
+            <a href="/pages/profissoes.html" target="_blank">PROFISSÕES</a>
+            <a href="/pages/contacto.html" target="_blank">CONTACTO</a>
         </nav>
+    
     </header>
     <main>
         <div id="imagem">
@@ -46,24 +50,50 @@
 
         </div>
 
-        <div id="botao">
-            <button>
-                <p>Clique Aqui!</p>
-            </button>
-            <!--Curiosidades :
-            <p>A primeira escola de veterinária foi fundada na França (1761).</p>
-            <p>Veterinários podem especializar-se em animais exóticos (como répteis ou aves raras).</p>
-            <p>Usam anestesia adaptada para cada espécie (ex.: gatos são sensíveis a certos anestésicos).</p>-->
+        <div>
+
+            <button id="botao">Clique Aqui!</button>
+                <p id="curi1">1. A primeira escola de veterinária foi fundada na França (1761)</p>
+                <p id="curi2">2. Veterinários podem especializar-se em animais exóticos (como répteis ou aves raras).</p>
+                <p id="curi3">3. Usam anestesia adaptada para cada espécie (ex.: gatos são sensíveis a certos anestésicos).</p>
+           
         </div>
           
         <br>
         <!--link não funciona, revisar-->
-        <button href="http://127.0.0.1:5500/Projeto/projeto001/profissoes.html">Acessar Profissões</button>
+        <button href="/pages/profissoes.html" target="_blank">Acessar Profissões</button>
     </main>
 
     <footer>
         <span>&copy; &#174;</span>
     </footer>
     
+    <script>
+        // falta mudar o estilo do titulo
+        // Criação de váriavel para captura os elementos - botão veterinario
+        let botao = document.getElementById("botao")
+        let curi1 = document.getElementById("curi1")
+        let curi2 = document.getElementById("curi2")
+        let curi3 = document.getElementById("curi3")
+      
+        // ocultar o que esta visivel
+        curi1.style.display = "none";
+        curi2.style.display = "none";
+        curi3.style.display = "none";
+        
+        // função para alterar a visibilidade das variavel  - botão veterinario
+        function mostrarCuriosidade(){
+            const mostrar = curi1.style.display === "none";
+
+            curi1.style.display = mostrar ? "block" : "none";
+            curi2.style.display = mostrar ? "block" : "none";
+            curi3.style.display = mostrar ? "block" : "none";
+
+            botao.textContent = mostrar ? "Ocultar" : "Mostrar";
+        }
+
+        //dar utilizadae ao botão - botão veterinario
+        botao.addEventListener("click", mostrarCuriosidade);
+    </script>
 </body>
 </html>
