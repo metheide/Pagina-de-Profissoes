@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tatuador</title>
+
+     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    
     <header>
-        <img src="Colocar path da imagem aqui" alt="Logo">
+        <img src="/imagens/logo.jpg" alt="Logo">
         <nav>
-            <a href="http://127.0.0.1:5500/Projeto/projeto001/index.html">INICIO</a>
-            <a href="http://127.0.0.1:5500/Projeto/projeto001/profissoes.html">PROFISSÕES</a>
-            <a href="http://127.0.0.1:5500/Projeto/projeto001/contacto.html">CONTACTO</a>
+            <a href="/index.html" target="_blank">INICIO</a>
+            <a href="/pages/profissoes.html" target="_blank">PROFISSÕES</a>
+            <a href="/pages/contacto.html" target="_blank">CONTACTO</a>
         </nav>
     </header>
+
     <main>
+
+        
         <div id="imagem">
-            <img src="/Projetos/projeto001/imagens/tatuador.jpg" alt="tatuador">
+            <img src="/imagens/tatuador.jpg" alt="tatuador">
 
         </div>
         <div id="oque"></div>
@@ -44,29 +50,60 @@
                     <p>Máquina de tatuagem (bobina ou rotativa).</p>
                     <p>Agulhas, tintas específicas, luvas, autoclaves e materiais descartáveis.</p>
                 <h2>Requisitos legais</h2>
-                <p>Seguir normas da vigilância sanitária</p>
-                <p>Estar atualizado sobre regras de biossegurança e esterilização.</p>
+                    <p>Seguir normas da vigilância sanitária</p>
+                    <p>Estar atualizado sobre regras de biossegurança e esterilização.</p>
 
         </div>
 
-        <div id="botao">
-            <button>
-                <p>Clique Aqui!</p>
-            </button>
-            <!--Curiosidades :
-            <p>A tatuagem mais antiga conhecida está em Ötzi, múmia de 5.300 anos.</p>
-            <p>Tatuagem medicinal: Usada para cobrir cicatrizes ou marcar áreas de radioterapia.</p>
-            <p>Existem estilos variados de tatuagem: realismo, aquarela, tradicional, pontilhismo, tribal, neotradicional, entre outros.</p>-->
+        <div>
+            
+            <button id="botao">Clique Aqui!</button>
+                <p id="curi1">1. A tatuagem mais antiga conhecida está em Ötzi, múmia de 5.300 anos.</p>
+                <p id="curi2">2. Tatuagem medicinal: Usada para cobrir cicatrizes ou marcar áreas de radioterapia.</p>
+                <p id="curi3">3. Existem estilos variados de tatuagem: realismo, aquarela, tradicional, pontilhismo, tribal, neotradicional, entre outros.</p>
+        
         </div>
           
         <br>
-        <!--link não funciona, revisar-->
-        <button href="http://127.0.0.1:5500/Projeto/projeto001/profissoes.html">Acessar Profissões</button>
+                    <!--link não funciona, revisar-->
+            <button href="/pages/profissoes.html" target="_blank">Acessar Profissões</button>
+
     </main>
 
     <footer>
         <span>&copy; &#174;</span>
     </footer>
+
+    <script>
+        // falta mudar o estilo do titulo
+        // Criação de váriavel para captura os elementos - botão tatuador
+        let botao = document.getElementById("botao")
+        let curi1 = document.getElementById("curi1")
+        let curi2 = document.getElementById("curi2")
+        let curi3 = document.getElementById("curi3")
+      
+        // ocultar o que esta visivel
+        curi1.style.display = "none";
+        curi2.style.display = "none";
+        curi3.style.display = "none";
+        
+        // função para alterar a visibilidade das variavel  - botão tatuador
+        function mostrarCuriosidade(){
+            const mostrar = curi1.style.display === "none";
+
+            curi1.style.display = mostrar ? "block" : "none";
+            curi2.style.display = mostrar ? "block" : "none";
+            curi3.style.display = mostrar ? "block" : "none";
+
+            botao.textContent = mostrar ? "Ocultar" : "Mostrar";
+        }
+
+        
+        //dar utilizadae ao botão - botão tatuador
+        botao.addEventListener("click", mostrarCuriosidade);
+        
+
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEMMEJ</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="Colocar path da imagem aqui" alt="Logo">
+        
+        <button href="/pages/profissoes.html" target="_blank">Acessar Profissões</button>
+        <nav>
+            <a href="/index.html" target="_blank">INICIO</a>
+            <a href="/pages/profissoes.html" target="_blank">PROFISSÕES</a>
+            <a href="/pages/contacto.html" target="_blank">CONTACTO</a>
+        </nav>
+    </header>
+    
+    <main>
+        <img src="/imagens/Pizzaiolo (1).JPG" alt="Pizzaiolo">
+
+         <div id="formacao">
+            <h1>Pizzaiolo</h1>
+
+                <p>Um pizzaiolo é um profissional especializado na produção de pizzas.</p>
+                <p> sua função principal é preparar a massa, os recheios, os temperos e os aperitivos que acompanham a pizza, garantindo a qualidade, o sabor e a apresentação final, de forma a agradar os clientes</p>
+                <p>O Pizzaiolo é responsável por criar e preparar pizzas de forma artesanal, combinando ingredientes para criar sabores e texturas únicas.</p>          
+        </div>
+
+        <br>
+        
+        <div id = "adicionais">
+            <h1>Informações Adcionais</h1>
+                <h2>Formação</h2>
+                    <p>Estude a massa: Aprenda sobre farinhas (Tipo 00, farinha de trigo especial), hidratação, fermentação (natural ou com fermento biológico) e técnicas de sova.</p>
+                    <p>Domine o molho: O equilíbrio entre acidez e doçura do tomate é crucial.</p>
+                    <p>Conheça os queijos e ingredientes: Muçarela de búfala, parmesão, presunto cru, manjericão fresco e outros ingredientes tradicionais.</p>
+                    <p>Dica: Comece fazendo pizza em casa, testando receitas e ajustando pontos como tempo de fermentação e temperatura do forno.</p>
+                <h2>Cursos de Pizzaiolo</h2>
+                    <p>Cursos especializados em pizza napolitana (alguns até com certificação da AVPN – Associação Vera Pizza Napolitana).</p>
+                    <p>Workshops com pizzaiolos renomados.</p>
+
+        </div>
+
+        <div>
+        
+            <button id="botao">Clique Aqui!</button>
+                <p id="curi1">1. Os melhores pizzaiolos, muitas vezes, são herdeiros de uma tradição familiar que se estende por gerações. </p>
+                <p id="curi2">2. A figura do pizzaiolo tem suas raízes em Nápoles, Itália, onde a pizza moderna teve origem no século XVIII. </p>
+                <p id="curi3">3. Existe uma pizza famosa chamada Luigi XII, criada pelo pizzaiolo Renato Viola, que é considerada a mais cara do mundo, custando cerca de 8 mil euros. </p>
+        
+        </div>
+          
+        <br>
+    </main>
+
+    <footer>
+        <span>&copy; &#174;</span>
+    </footer>
+
+    <script>
+        let botao = document.getElementById("botao")
+        let curi1 = document.getElementById("curi1")
+        let curi2 = document.getElementById("curi2")
+        let curi3 = document.getElementById("curi3")
+
+        curi1.style.display = "none";
+        curi2.style.display = "none";
+        curi3.style.display = "none";
+
+        function mostrarCuriosidade(){
+            const mostrar = curi1.style.display === "none";
+
+            curi1.style.display = mostrar ? "block" : "none";
+            curi2.style.display = mostrar ? "block" : "none";
+            curi3.style.display = mostrar ? "block" : "none";
+
+            botao.textContent = mostrar ? "Ocultar" : "Mostrar";
+        }
+        botao.addEventListener("click", mostrarCuriosidade);
+
+    </script>
+</body>
+</html>
